@@ -23,7 +23,9 @@ This is a simple web application for taking notes.
 
 ## Screenshots
 
-Include screenshots of your application here.
+![First Screenshot](screenshots/first.jpg)
+![Second Screenshot](screenshots/second.jpg)
+![Third Screenshot](screenshots/third.jpg)
 
 ## Contributing
 
