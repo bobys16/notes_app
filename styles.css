@@ -1,0 +1,310 @@
+body {
+    font-family: 'Madimi One', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: rgb(244, 237, 204);
+}
+
+h1 {
+    text-align: center;
+    color: rgb(95, 93, 156); 
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+}
+
+.created-at-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.archive-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.archived-icon {
+    margin-left: 10px;
+    font-size: 1.2em;
+}
+
+.delete-button {
+    background-color: #ff5252;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 8px; 
+}
+
+.delete-button:hover {
+    background-color: #ff0000;
+}
+
+.delete-icon {
+    margin-right: 4px;
+}
+
+.note-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.note-list {
+    margin-block: 1rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 24px;
+    row-gap: 32px;
+}
+
+.note-item {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 16px;
+    overflow: hidden;
+    transition: all 150ms ease-in;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    display: grid; /* New addition */
+    grid-template-columns: 1fr; /* New addition */
+}
+
+.note-item:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    z-index: 1; 
+}
+
+.note-item:focus {
+    outline: none; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    z-index: 1; 
+}
+
+.note-item h3 {
+    margin-top: 0;
+}
+
+.form-add-note {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: rgb(164, 206, 149); 
+    margin-top: 90px; 
+}
+
+.form-add-note input[type="text"],
+.form-add-note textarea {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.form-add-note button {
+    padding: 10px 20px;
+    background-color: rgb(95, 93, 156); 
+    color: #fff; 
+    border: none;
+    cursor: pointer;
+}
+
+.form-add-note button:hover {
+    background-color: rgb(77, 75, 124); 
+}
+
+.confirmation-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-dialog p {
+    margin: 0 0 10px;
+}
+
+.confirm-button,
+.cancel-button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+}
+
+.confirm-button {
+    background-color: rgb(97, 150, 166); 
+    color: white; 
+}
+
+.confirm-button:hover {
+    background-color: rgb(77, 120, 133); 
+}
+
+.cancel-button {
+    background-color: #ccc;
+    color: rgb(95, 93, 156); 
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(to right, #5F5D9C, #6196A6, #A4CE95, #F4EDCC);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    color: white;
+    z-index: 1000;
+}
+
+.note-item:focus {
+    outline: none; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    z-index: 1; 
+}
+
+.note-item h3 {
+    margin-top: 0;
+}
+
+.form-add-note {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: rgb(164, 206, 149); 
+    margin-top: 90px; 
+}
+
+.form-add-note input[type="text"],
+.form-add-note textarea {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.form-add-note button {
+    padding: 10px 20px;
+    background-color: rgb(95, 93, 156); 
+    color: #fff; 
+    border: none;
+    cursor: pointer;
+}
+
+.form-add-note button:hover {
+    background-color: rgb(77, 75, 124); 
+}
+
+.confirmation-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-dialog p {
+    margin: 0 0 10px;
+}
+
+.confirm-button,
+.cancel-button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+}
+
+.confirm-button {
+    background-color: rgb(97, 150, 166); 
+    color: white; 
+}
+
+.confirm-button:hover {
+    background-color: rgb(77, 120, 133); 
+}
+
+.cancel-button {
+    background-color: #ccc;
+    color: rgb(95, 93, 156); 
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(to right, #5F5D9C, #6196A6, #A4CE95, #F4EDCC);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    color: white;
+    z-index: 1000;
+}
+note-list {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 16px;
+    overflow: hidden;
+    transition: all 150ms ease-in;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Initially, 6 columns */
+    gap: 16px;
+}
+@media screen and (min-width: 1200px) {
+    note-list {
+        grid-template-columns: repeat(5, 1fr); /* 6 columns on screens larger than 1200px */
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    note-list {
+        grid-template-columns: repeat(4, 1fr); /* 5 columns on smaller screens */
+    }
+}
+
+@media screen and (max-width: 992px) {
+    note-list {
+        grid-template-columns: repeat(3, 1fr); /* 4 columns on even smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    note-list {
+        grid-template-columns: repeat(2, 1fr); /* 3 columns on smaller screens */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    note-list {
+        grid-template-columns: repeat(1, 1fr); /* 2 columns on smallest screens */
+    }
+}
